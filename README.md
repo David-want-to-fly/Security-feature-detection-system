@@ -11,8 +11,23 @@
 如果您是因为我的邮件访问我的github，您有兴趣具体了解我的项目，可以回复我，我可以配置一下，挂载到外链给您访问，期待您的回信！
 
 ## 效果展示 Demo
-（1）：
-![Logo](demo/wei.png)
+（1）上传图片识别的结果（此时配置了人脸识别，多目标识别，人脸识别后，到数据库中找到对应的工种特征，进行多特征检验）
+![图片识别的结果](images/wei_image_result.jpg)
+（2）实时视频识别检测（此时仅配置人脸识别和多目标识别）
+人脸识别与Compreface后端匹配上：
+![实时视频识别符合人脸的结果](images/wei_innervideo_face.jpg)
+人脸识别与Compreface后端匹配不上：（手动遮脸，实现非Compreface后端配置人员）
+![实时视频识别不符合人脸的结果](images/wei_innervideo_noface.jpg)
+（3）外摄
+人脸识别与Compreface后端匹配上：
+![实时视频识别符合人脸的结果](images/wei_video_face.jpg)
+人脸识别与Compreface后端匹配不上：（手动遮脸，实现非Compreface后端配置人员）
+![实时视频识别不符合人脸的结果](images/wei_video_noface.jpg)
+（4）提供我配置服务器Pytorch供参考
+![Pytorch](images/pytorch.png)
+
+
+
 ## 人脸识别模块部署
 系统使用Docker封装的Compreface实现人脸识别，localhost运行后，可以在网页进行操作，但是系统中需要通过官方API文档编写FaceAPI.py借助request等实现各种功能
 
@@ -121,6 +136,9 @@ self.model = self.model_load("runs/train/exp/weights/best.pt",device=self.device
 （1）：构建工种-工作人员数据库，构建工种-工种特征数据库，建立关系型数据库（MySQL or Sqlite3），根据人脸识别的结果，检索数据库，获取当前工作人员应该具备的特征，将识别特征与需求特征进行比对。完成安全特征检测
 
 （2）：提出一种模块化、智能化的多特征安全识别系统（涉密，暂时不展开）
+
+## 扩展
+正如你所见，项目的功能繁多，我的时间有限，实际上还有很多组合我并没有时间去编写一个十分完善的系统。后续如果有需求我会进一步编写完整，或者您可以fork下来，欢迎您
 
 
 

@@ -24,8 +24,8 @@
 人脸识别与Compreface后端匹配不上：（手动遮脸，实现非Compreface后端配置人员）
 ![实时视频识别不符合人脸的结果](images/wei_video_noface.jpg)
 （4）多目标识别的其他识别结果
-![multiple_target-1](images/multiple _target-1.jpg)images/multiple _target-1.jpg
-![multiple_target-2](images/multiple _target-2.jpg)
+![multiple_target-1](images/multiple_target-1.jpg)
+![multiple_target-2](images/multiple_target-2.jpg)
 （5）提供我配置服务器Pytorch供参考
 ![Pytorch](images/pytorch.png)
 （6）Compreface本地启动的网页（这里我们用FaceAPI封装各种请求，实现让脚本执行命令）
